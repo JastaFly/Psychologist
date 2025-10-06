@@ -1,0 +1,591 @@
+
+//Main-screen
+
+.main-screen {
+  display: flex;
+  justify-content: space-between;
+  background-color: #c4e7ff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 25px;
+  height: 900px;
+}
+
+//Text block
+
+.person {
+
+
+ &__img {
+    width: 180px;
+   margin-right: 30px;
+  }
+
+  &__txt {
+    font-size: 35px;
+  }
+}
+
+.person-name {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.person-info {
+  width: 75%;
+}
+
+//Photo block
+
+.composition {
+
+  margin-top: 60px;
+
+  &__photo {
+    width: 500px;
+    position: relative;
+    z-index: 1;
+  }
+
+
+  &__elem {
+    width: 380px;
+
+    &_beige {
+      position: relative;
+      top: -690px;
+      left: -10px ;
+    }
+  }
+
+  &__txt {
+    font-style: italic;
+    font-size: 45px;
+    position: relative;
+    top: -290px;
+    left: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 240px;
+    text-align: center;
+    transform: rotate(-5deg)
+  }
+
+  &__wrap {
+    position: relative;
+    top: -220px;
+    left: -270px;
+  }
+}
+
+//Requests
+
+.request {
+  font-size: 55px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  &_txt {
+    margin-top: 40px;
+  }
+
+}
+
+.request-info {
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &__img {
+    width: 135px;
+    margin-right: 20px;
+  }
+
+  &__txt {
+    font-size: 32px;
+    width: 35%;
+  }
+}
+
+.other-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 250px;
+  background-color: #bbcfdd;
+  padding-right: 50px;
+  padding-left: 50px;
+
+  &__txt {
+    width: 45%;
+  }
+
+}
+
+//Methods
+
+.methods {
+  background-color: #d8f0b6;
+  margin-top: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: 500px;
+}
+
+.methods-work {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+
+
+  &__title {
+    width: 90%;
+  }
+
+  &__text {
+    width: 100%;
+
+  }
+}
+
+//Ikons and text
+
+.icons-txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  text-align: center;
+  margin-left: 85px;
+  margin-right: 60px;
+
+
+  &__img {
+width: 120px;
+  }
+
+  &__txt {
+    width: 20%;
+  }
+
+  &_work {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+//The work process
+
+.work-process {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.work-process-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.work-info {
+  width: 60%;
+}
+
+.picture {
+  width: 350px;
+  margin-right: 120px;
+}
+
+//Mindfullness
+
+.mind-work {
+  background-color: #d8f0b6;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: 300px;
+
+  &__txt {
+    width: 60%;
+  }
+}
+
+.mind-work-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+//Services
+
+.services {
+  margin-top: 30px;
+}
+
+.price-list {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.price {
+  text-align: center;
+  background-color: #bbcfdd;
+  border-radius: 15px;
+  width: 27%;
+  font-size: 35px;
+  margin-top: 30px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 460px;
+
+  p {
+    margin: 0;
+  }
+
+  &__txt {
+    font-size: 32px;
+  }
+
+  &__time {
+    color: #525236;
+  }
+
+  &__price {
+    font-weight: bold;
+
+  }
+
+  &__sale {
+    font-size: 30px;
+    text-decoration: line-through;
+  }
+}
+
+//Free consultation
+
+.free {
+  background-color: #d8f0b6;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  h2 {
+    width: 40%;
+    margin-right: 30px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__txt {
+width: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+//Reviews
+
+.reviews {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 50px;
+  padding-left: 50px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  &__nav {
+    width: 90px;
+
+  }
+}
+
+.review {
+  width: 33%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 3px solid #525236;
+  border-radius: 15px;
+  height: 620px;
+
+  p {
+    margin: 0;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__photo {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__name {
+    font-size: 40px;
+    font-weight: 500;
+    color: #525236;
+  }
+
+  &__city {
+    color: #525236;
+  }
+
+  &__txt {
+    font-size: 28px;
+  }
+}
+
+//Support-info
+
+.support {
+  background-color: #bbcfdd;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  h2 {
+    width: 40%;
+    margin-right: 30px;
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__txt {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+//Education-info
+
+.education-info {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px
+}
+
+.education {
+
+  display: flex;
+justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+
+  &__nav {
+    width: 90px;
+
+  }
+
+  &__wrap {
+    width: 85%;
+    border: 3px solid #525236;
+    border-radius: 15px;
+  }
+
+  &__img {
+    display: block;
+    margin: 0 auto;
+    width: 75%;
+    padding: 30px;
+  }
+
+}
+
+//The answers
+
+.questions {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
+
+}
+
+.question {
+
+  background-color: #d8f0b6;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-right: 35px;
+  padding-left: 35px;
+  margin-bottom: 25px;
+
+  &__img {
+    width: 90px;
+  }
+
+  &__txt {
+    font-size: 35px;
+    font-weight: bold;
+  }
+}
+
+//Form
+
+.important-info {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.photo {
+width: 50%;
+
+  h2 {
+    text-align: center;
+    font-size: 60px;
+  }
+
+
+  &__img {
+    width: 550px;
+    position: relative;
+    z-index: 1;
+    left: 75px;
+  }
+
+  &__ellipse-blue {
+    width: 330px;
+    position: relative;
+    top: -340px;
+    left: -620px;
+  }
+
+  &__ellipse-green {
+    width: 330px;
+    position: relative;
+    top: -210px;
+    left: 450px;
+  }
+
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 700px;
+  width: 50%;
+
+  &__input {
+    border: 2px solid #525236;
+    background-color: #ffeed7;
+    width: 85%;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 25px;
+    margin-bottom: 10px;
+
+    ::placeholder { color: #525236; }
+  }
+
+  &__message {
+    font-family: 'Ubuntu Sans';
+    border: 2px solid #525236;
+    background-color: #ffeed7;
+    width: 85%;
+    height: 150px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 25px;
+
+    ::placeholder { color: #525236; }
+  }
+
+}
+
+//Support-btn
+
+.support-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(250, 225, 102, 0.5);
+  cursor: pointer;
+  width: 300px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 0 10px 10px 0;
+  position: fixed;
+  top: 500px;
+  left: -280px;
+  transition: 0.7s;
+  text-decoration:none;
+
+  &:hover {
+    left: 0;
+  }
+
+  &__logo {
+    width: 30px;
+  }
+
+  &__txt {
+    font-size: 20px;
+    color: #6a4513;
+
+
+  }
+}
+

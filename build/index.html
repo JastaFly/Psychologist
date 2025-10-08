@@ -602,22 +602,19 @@
 <div class="important-info">
     <div class="photo">
         <img class="photo__img" src="img/psy_photo.png">
-        <svg class="photo__ellipse-blue" viewBox="0 0 335 341" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="146" cy="170.5" rx="189" ry="170.5" fill="#BBCFDD"/>
-        </svg>
-        <svg class="photo__ellipse-green" viewBox="0 0 378 341" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="189" cy="170.5" rx="189" ry="170.5" fill="#D8F0B6" fill-opacity="0.6"/>
-        </svg>
+        <div class="photo__ellipse-blue"></div>
+        <div class="photo__ellipse-green"></div>
+
     </div>
 
     <form name="recording" class="form">
         <h2>ЗАПИСЬ НА КОНСУЛЬТАЦИЮ</h2>
         <span>Заполните форму и я свяжусь с вами в ближайшее время:</span>
 
-        <input type="text" class="form__input" name="firstname"
+        <input type="text" required class="form__input" name="firstname"
                placeholder="Ваше имя*">
 
-        <input type="tel" class="form__input" name="number"
+        <input type="tel" required class="form__input" name="number"
                placeholder="+7 (000) 000-00-00*">
 
         <input type="email" class="form__input" name="login"

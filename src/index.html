@@ -308,7 +308,7 @@
             <span class="mind-work__txt">Представьте, что мы починили фундамент дома. Теперь важно не просто жить в нем по старой памяти, а осознанно обустроить <span class="bold">новое пространство.</span></span>
             </div>
 
-            <div class="icons-txt">
+            <div class="icons-txt icons-txt_mind">
                 <svg class="icons-txt__img" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <rect width="150" height="150" fill="url(#pattern0_36_8)"/>
                     <defs>
@@ -396,7 +396,6 @@
             </div>
             </div>
         <div class="btn btn_blue">ЗАПИСАТЬСЯ</div>
-    </div>
     </div>
 
     <div class="reviews">
@@ -500,9 +499,11 @@
                     </defs>
                 </svg>
                 </div>
+                <div class="questions-wrap">
                 <p>Консультация проходит онлайн по видеосвязи. В назначенное время мы созваниваемся в любом удобном мессенджере.</p>
             <p>Как показывает практика, онлайн-консультации также эффективны, как и разговор с психологом в кабинете. Кроме того, вы экономите время, которое потратили бы на дорогу. И можете выбрать для себя максимально комфортную обстановку для сессии, что способствует более глубокой и открытой работе.</p>
-            </div>
+                </div>
+                </div>
 
             <div class="question">
                 <div class="question-wrap">
@@ -587,15 +588,15 @@
 
     <form name="recording" class="form">
         <h2>ЗАПИСЬ НА КОНСУЛЬТАЦИЮ</h2>
-        <span>Заполните форму и я свяжусь с вами в ближайшее время: </span>
+        <span>Заполните форму и я свяжусь с вами в ближайшее время:</span>
 
-        <input type="name" class="form__input"
+        <input type="text" class="form__input" name="firstname"
                placeholder="Ваше имя*">
 
-        <input type="number" class="form__input"
+        <input type="tel" class="form__input" name="number"
                placeholder="+7 (000) 000-00-00*">
 
-        <input type="email" class="form__input"
+        <input type="email" class="form__input" name="login"
                placeholder="Ваш e-mail">
 
         <textarea class="form__message" name="message" id="message" placeholder="Комментарий"></textarea>

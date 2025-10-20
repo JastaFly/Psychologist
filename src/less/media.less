@@ -1559,6 +1559,10 @@ left: -150px;
     &__title {
       font-size: 23px;
     }
+
+    &-wrap {
+      margin-top: 5px;
+    }
   }
 
   .footer-links {
@@ -2502,16 +2506,15 @@ flex-direction: row-reverse;
   }
 
   .price-list {
-    display: block;
-
+display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .price {
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
     width: 55%;
     height: 400px;
+
 
 
     &__title {
@@ -3070,12 +3073,15 @@ main {
 
     &__img {
       width: 70px;
+      margin-bottom: 5px;
     }
 
     &__txt {
 
+      margin-left: 10px;
+
       &_work {
-        margin-left: 5px;
+       margin-left: 5px;
       }
     }
 
@@ -3401,7 +3407,7 @@ width: 260px;
 
     &__txt {
       font-size: 15px;
-      margin-left: 10px;
+      margin-left: 8px;
 
       &_work {
         font-size: 18px;
@@ -3454,14 +3460,18 @@ width: 260px;
     padding-left: 15px;
     padding-right: 15px;
 
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+
     &__nav {
 
-      width: 130px;
       display: flex;
-      align-items: center;
+      justify-content: space-between;
+      width: 70px;
       margin-top: 8px;
       margin-bottom: 8px;
-      margin-left: 60px;
 
 
       &_main {
@@ -3474,16 +3484,12 @@ width: 260px;
       }
     }
 
-    &__container {
-      display: block;
-    }
-
   }
 
  .review {
 
    width: 80%;
-   height: 350px;
+   height: 330px;
 
    &_main {
      display: none;
@@ -3669,19 +3675,14 @@ margin-top: 10px;
 
   }
 
-  .review {
-
-    height: 335px;
-
-    &__txt {
-      font-size: 13px;
-    }
-  }
-
   .reviews {
 
     padding-top: 20px;
     padding-bottom: 20px;
+
+    &__container {
+      margin-top: 15px;
+    }
 
 
   }
@@ -3966,6 +3967,10 @@ margin-top: 10px;
     padding-left: 10px;
   }
 
+  .review {
+    height: 350px;
+  }
+
   .education {
 
     &__nav {
@@ -3994,12 +3999,22 @@ margin-top: 10px;
 
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
 
   .request-group {
   &__txt {
     font-size: 15px;
   }
+  }
+
+  .review {
+
+    width: 75%;
+    height: 330px;
+
+    &__txt {
+      font-size: 13px;
+    }
   }
 }
 
@@ -4142,23 +4157,12 @@ margin-top: 10px;
       width: 50px;
     }
 
-    &__txt {
-      font-size: 12px;
-    }
-
     &__name {
       font-size: 18px;
     }
 
     &__city {
       font-size: 15px;
-    }
-  }
-
-  .reviews {
-
-    &__nav {
-      width: 120px;
     }
   }
 
@@ -4321,14 +4325,11 @@ margin-top: 10px;
 
     height: 320px;
 
-
-  }
-
-  .reviews {
-
-    &__nav {
-      width: 110px;
+    &__txt {
+      font-size: 12px;
     }
+
+
   }
 
   .form-invite {

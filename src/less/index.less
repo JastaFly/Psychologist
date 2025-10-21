@@ -613,6 +613,11 @@ justify-content: space-between;
     margin-bottom: 10px;
 
     &::placeholder { color: #525236; }
+
+    &_modal {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
   }
 
   &__message {
@@ -629,6 +634,11 @@ justify-content: space-between;
     font-size: 25px;
 
     &::placeholder { color: #525236; }
+
+    &_modal {
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
   }
 
 }
@@ -666,6 +676,44 @@ justify-content: space-between;
     font-size: 20px;
     color: #6a4513;
 
+
+  }
+}
+
+//Modal form
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  position: fixed;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99998;
+}
+
+.modal-form {
+  width: 25%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #ffeed7;
+  border: 2px solid #525236;
+  border-radius: 30px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-right: 5%;
+  padding-left: 5%;
+
+
+  &__txt {
+    font-size: 25px;
 
   }
 }

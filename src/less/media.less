@@ -46,6 +46,10 @@
     &_support {
       width: 300px;
     }
+
+    &_modal {
+      font-size: 20px;
+    }
   }
 
   .logo {
@@ -317,16 +321,14 @@ width: 500px;
 
   .modal-form {
 
-    h3 {
-      font-size: 38px;
-    }
+    width: 30%;
 
-    &__close {
-      margin-bottom: 30px;
+    h3 {
+      font-size: 35px;
     }
 
     &__txt {
-      font-size: 22px;
+      font-size: 20px;
     }
   }
 
@@ -521,7 +523,7 @@ width: 500px;
   }
 
   .modal-form {
-    width: 28%;
+    width: 35%;
   }
 }
 
@@ -618,12 +620,29 @@ width: 500px;
 
   .modal-form {
 
-    &__txt {
-      font-size: 21px;
+    h3 {
+      font-size: 32px;
     }
 
-    &__close {
-      margin-bottom: 25px;
+    &__txt {
+      font-size: 20px;
+    }
+
+  }
+
+  .form {
+
+    &__input {
+
+      &_modal {
+        font-size: 20px;
+      }
+    }
+
+    &__message {
+      &_modal {
+        font-size: 20px;
+      }
     }
   }
 
@@ -844,7 +863,9 @@ width: 280px;
       &_modal {
         padding-top: 15px;
         padding-bottom: 15px;
-        font-size: 20px;
+        font-size: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
       }
     }
 
@@ -853,7 +874,10 @@ width: 280px;
       &_modal {
         padding-top: 15px;
         padding-bottom: 15px;
-        font-size: 20px;
+        font-size: 15px;
+        height: 80px;
+        margin-top: 5px;
+        margin-bottom: 5px;
       }
     }
   }
@@ -887,6 +911,11 @@ width: 280px;
     &_form {
       width: 230px;
     }
+
+    &_modal {
+      width: 180px;
+      font-size: 17px;
+    }
   }
 
   .contacts {
@@ -913,13 +942,17 @@ width: 280px;
 
   .modal-form {
 
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 35%;
+    h3 {
+      font-size: 26px;
+    }
+
+    &__txt {
+      font-size: 17px;
+    }
 
     &__close {
-      width: 45px;
-      margin-bottom: 20px;
+      width: 38px;
+      margin-bottom: 15px;
     }
   }
 
@@ -1107,17 +1140,6 @@ margin-left: -60px;
     width: 24%;
   }
 
-  .modal-form {
-
-    h3 {
-      font-size: 33px;
-    }
-
-    &__txt {
-      font-size: 18px;
-    }
-  }
-
   .form {
 
     &__input {
@@ -1159,6 +1181,12 @@ margin-left: -60px;
 
     &_support {
       width: 260px;
+    }
+
+    &_modal {
+      font-size: 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
 
@@ -1379,11 +1407,18 @@ left: -150px;
     &__input {
       font-size: 19px;
 
+      &_modal {
+        font-size: 16px;
+      }
+
     }
 
     &__message {
       font-size: 19px;
 
+      &_modal {
+        font-size: 16px;
+      }
     }
   }
 
@@ -1396,14 +1431,10 @@ left: -150px;
 
   .modal-form {
 
-    width: 45%;
+    width: 40%;
 
-    h3 {
-      font-size: 32px;
-    }
 
     &__close {
-      width: 40px;
       margin-left: 95%;
     }
 
@@ -1703,6 +1734,14 @@ left: -150px;
     }
   }
 
+  .modal-form {
+    width: 45%;
+
+    &__close {
+      width: 35px;
+    }
+  }
+
 
 }
 
@@ -1827,6 +1866,10 @@ left: -150px;
     &_form {
       width: 210px;
     }
+
+    &_modal {
+      width: 180px;
+    }
   }
 
   .main-screen {
@@ -1895,6 +1938,34 @@ left: -150px;
 
 .price {
   height: 230px;
+}
+
+.modal-form {
+
+  h3 {
+    font-size: 24px;
+  }
+
+  &__txt {
+    font-size: 16px;
+  }
+}
+
+.form {
+
+  &__input {
+
+    &_modal {
+      font-size: 14px;
+    }
+  }
+
+  &__message {
+    &_modal {
+      font-size: 14px;
+      height: 100px;
+    }
+  }
 }
 
 }
@@ -1988,6 +2059,10 @@ left: -150px;
 
     &_form {
       font-size: 16px;
+    }
+
+    &_modal {
+      font-size: 15px;
     }
   }
 
@@ -2133,6 +2208,20 @@ height: 450px;
       padding-top: 14px;
       padding-bottom: 14px;
 
+      &_modal {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+
+    }
+
+    &__message {
+
+      &_modal {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        height: 90px;
+      }
     }
 
   }
@@ -2147,8 +2236,15 @@ height: 450px;
 
   .modal-form {
 
+    width: 50%;
+
+    h3 {
+      font-size: 22px;
+    }
+
     &__close {
-      width: 35px;
+      width: 30px;
+      margin-bottom: 10px;
     }
 
   }
@@ -2344,9 +2440,7 @@ height: 450px;
       font-size: 14px;
 
       &_modal {
-        margin-bottom: 5px;
-        margin-top: 8px;
-        font-size: 16px;
+        font-size: 15px;
       }
     }
 
@@ -2354,9 +2448,7 @@ height: 450px;
       font-size: 14px;
 
       &_modal {
-        margin-bottom: 5px;
-        margin-top: 8px;
-        font-size: 16px;
+        font-size: 15px;
       }
     }
   }
@@ -2382,12 +2474,6 @@ height: 450px;
     }
   }
 
-  .modal-form {
-
-    h3 {
-      font-size: 30px;
-    }
-  }
 }
 
 @media (max-width: 768px) {
@@ -2860,12 +2946,24 @@ display: flex;
       padding-top: 20px;
       padding-bottom: 20px;
 
+      &_modal {
+        padding-top: 15px;
+        padding: 15px;
+      margin-top: 5px;
+      }
+
     }
 
     &__message {
       font-size: 20px;
       padding-top: 20px;
       padding-bottom: 20px;
+
+      &_modal {
+        padding-top: 15px;
+        padding: 15px;
+        margin-top: 5px;
+      }
     }
   }
 
@@ -2914,7 +3012,7 @@ display: flex;
     width: 65%;
 
     h3 {
-      font-size: 32px;
+      font-size: 30px;
     }
 
     &__txt {
@@ -2936,14 +3034,6 @@ h2 {
 
     &__img {
       width: 80px;
-    }
-  }
-
-  .modal-form {
-
-    &__close {
-      margin-left: 95%;
-      margin-bottom: 20px;
     }
   }
 
@@ -2982,6 +3072,10 @@ h2 {
 
     &_form {
       font-size: 20px;
+    }
+
+    &_modal {
+      font-size: 17px;
     }
   }
 
@@ -3109,32 +3203,21 @@ h2 {
     }
   }
 
-  .modal-form {
-
-    h3 {
-      font-size: 30px;
-    }
-
-    &__txt {
-      font-size: 21px;
-    }
-  }
-
   .form {
 
     &__input {
 
       &_modal {
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-top: 12px;
+        padding-bottom: 12px;
       }
     }
 
     &__message {
 
       &_modal {
-        padding-top: 15px;
-        padding-bottom: 15px;
+        padding-top: 12px;
+        padding-bottom: 12px;
       }
     }
   }
@@ -3246,8 +3329,9 @@ main {
     }
 
     &_modal {
-      font-size: 16px;
+      font-size: 15px;
       width: 180px;
+      margin-top: 5px;
     }
   }
 
@@ -3419,8 +3503,7 @@ width: 260px;
       padding-bottom: 15px;
 
       &_modal {
-        font-size: 18px;
-        margin-top: 8px;
+        font-size: 16px;
         margin-bottom: 5px;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -3433,8 +3516,7 @@ width: 260px;
       padding-bottom: 15px;
 
       &_modal {
-        font-size: 18px;
-        margin-top: 8px;
+        font-size: 16px;
         margin-bottom: 5px;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -3494,8 +3576,12 @@ width: 260px;
 
   .modal-form {
 
+    h3 {
+      font-size: 25px;
+    }
+
     &__txt {
-      font-size: 19px;
+      font-size: 18px;
     }
   }
 
@@ -3833,10 +3919,10 @@ width: 260px;
      padding-bottom: 13px;
 
      &_modal {
-       font-size: 16px;
+       font-size: 14px;
+       width: 85%;
        padding-top: 10px;
        padding-bottom: 10px;
-       width: 85%;
      }
    }
 
@@ -3846,11 +3932,11 @@ width: 260px;
      padding-bottom: 13px;
 
      &_modal {
-       font-size: 16px;
+       font-size: 14px;
        padding-top: 10px;
        padding-bottom: 10px;
        width: 85%;
-       height: 120px;
+       height: 110px;
      }
    }
  }
@@ -3890,7 +3976,7 @@ width: 260px;
    width: 70%;
 
    h3 {
-     font-size: 25px;
+     font-size: 23px;
    }
 
    &__txt {

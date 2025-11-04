@@ -372,10 +372,9 @@ width: 80%;
 //Reviews
 
 .reviews {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-right: 50px;
-  padding-left: 50px;
+
+  width: 90%;
+  margin: 0 auto;
 
   &__container {
     display: flex;
@@ -384,9 +383,18 @@ width: 80%;
     margin-top: 30px;
   }
 
+
   &__nav {
     width: 80px;
     cursor: pointer;
+    position: relative;
+    top: 500px;
+    left: -3%;
+
+    &-next {
+      top: -305px;
+      left: 98%;
+    }
 
     &_left {
       display: none;
@@ -396,7 +404,6 @@ width: 80%;
 }
 
 .review {
-  width: 33%;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -404,6 +411,7 @@ width: 80%;
   border: 3px solid #525236;
   border-radius: 15px;
   height: 620px;
+  box-sizing: border-box;
 
   p {
     margin: 0;
@@ -435,6 +443,8 @@ width: 80%;
   &__txt {
     font-size: 25px;
   }
+
+
 }
 
 //Support-info
@@ -773,4 +783,3 @@ padding-left: 0;
     font-weight: 500;
   }
 }
-

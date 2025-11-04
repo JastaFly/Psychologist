@@ -81,3 +81,50 @@ closeMobileMenu.addEventListener('click', () => {
         }
     })
 })
+
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 50,
+    navigation: {
+        nextEl: '.reviews__nav-next',
+        prevEl: '.reviews__nav-prev',
+    },
+    autoplay: {
+        delay: 5000,
+    },
+    breakpoints: {
+        1024: {
+            spaceBetween: 30
+        },
+        932: {
+            spaceBetween: 20
+        },
+
+        915: {
+            spaceBetween: 20
+        },
+
+        912: {
+            spaceBetween: 20
+        },
+
+        896: {
+            spaceBetween: 20
+        },
+        882: {
+            spaceBetween: 30
+        },
+
+        852: {
+            spaceBetween: 30
+        },
+        820: {
+            spaceBetween: 30
+        },
+        320: {
+            spaceBetween: 0,
+            slidesPerView: 1,
+        }
+    }
+});

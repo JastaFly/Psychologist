@@ -110,21 +110,22 @@
 
   .request {
     font-size: 45px;
-  }
 
-  .request-info {
-    margin-top: 20px;
-  }
-
-  .request-group {
-    &__img {
-      width: 110px;
+    &-info {
+      margin-top: 20px;
     }
 
-    &__txt {
-      font-size: 23px;
+    &-group {
+      &__img {
+        width: 110px;
+      }
+
+      &__txt {
+        font-size: 23px;
+      }
     }
   }
+
 
   .other-info {
     margin-right: -70px;
@@ -180,6 +181,14 @@
   .reviews__nav {
 
       width: 70px;
+
+    &-next {
+      top: -340px
+    }
+
+    &-prev {
+      top: 430px
+    }
   }
 
   .review {
@@ -507,6 +516,10 @@
   .modal-form {
     width: 35%;
   }
+
+  .reviews__nav-prev {
+    top: 400px;
+  }
 }
 
 @media (max-width: 1368px) {
@@ -558,17 +571,20 @@
   }
 
   .review {
-
-    height: 480px;
-
+    height: 510px;
     &__txt {
       font-size: 20px;
     }
-
   }
+
+
 
   .reviews__nav {
       width: 60px;
+
+    &-next {
+      top: -270px
+    }
   }
 
   .photo__ellipse-green {
@@ -759,7 +775,13 @@
     padding-right: 35px;
   }
 
+  .reviews__nav-prev {
+    top: 360px
+  }
+
   .review {
+    height: 470px;
+
     &__photo {
       width: 100px;
     }
@@ -1092,6 +1114,15 @@
       font-size: 18px;
   }
 }
+@media (max-width: 1080px) {
+  .review {
+    height: 500px;
+  }
+.reviews__nav-prev {
+  top: 380px;
+  left: -4%;
+}
+}
 
 @media (max-width: 1024px) {
   body {
@@ -1254,13 +1285,22 @@
     }
   }
 
-  .reviews__nav {
+  .reviews {
+    &__nav {
       width: 50px;
+
+&-prev {
+  top: 290px;
+}
+      &-next {
+        top: -200px
+      }
+    }
   }
 
   .review {
     width: 30%;
-    height: 400px;
+    height: 350px;
     padding-top: 20px;
     padding-bottom: 20px;
 
@@ -1513,13 +1553,19 @@
     padding-left: 15px;
   }
 
-  .reviews__nav {
+  .reviews {
+    &__nav {
       width: 40px;
+
+      &-next {
+        top: -230px
+      }
+    }
   }
 
   .review {
     width: 32%;
-    height: 380px;
+    height: 400px;
     padding: 30px;
 
     &__txt {
@@ -1679,6 +1725,10 @@
     margin-right: 0;
   }
 
+  .reviews__nav-next {
+    top: -190px;
+  }
+
   .review {
     height: 360px;
 
@@ -1834,7 +1884,7 @@
   }
 }
 
-@media (max-width: 882px) {
+@media (max-width: 883px) {
   .composition__photo {
     width: 245px;
   }
@@ -1881,9 +1931,23 @@
   }
 
 
-  .reviews {
-    padding-left: 30px;
-    padding-right: 30px;
+.reviews {
+  width: 95%;
+
+  &__nav {
+    &-prev {
+      left: -5%;
+    }
+
+    &-next {
+      left: 100%;
+      top: -200px;
+    }
+  }
+}
+
+  .review {
+    height: 380px;
   }
 }
 
@@ -2174,14 +2238,10 @@
     height: 205px;
   }
 
-  .reviews {
-    padding-right: 20px;
-    padding-left: 20px;
-
-    &__nav {
+  .reviews__nav {
       width: 30px;
     }
-  }
+
 
   .review {
     &__photo {
@@ -2566,9 +2626,20 @@
     }
   }
 
-  .reviews__nav {
+  .reviews {
+    width: 90%;
+    &__nav {
       width: 45px;
+
+      &-next {
+        left: 98%;
+      }
+
+      &-prev {
+        top: 350px;
+      }
     }
+  }
 
  .review {
     margin: 0 auto;
@@ -2591,9 +2662,6 @@
       font-size: 19px;
     }
 
-    &_main {
-      display: none;
-    }
   }
 
   .support {
@@ -2832,11 +2900,15 @@
 
   .review {
     width: 68%;
-    height: 390px;
+    height: 400px;
   }
 
   .review__txt {
     font-size: 18px;
+  }
+
+  .reviews__nav-prev {
+    top: 340px;
   }
 
   .request-group {
@@ -2970,8 +3042,11 @@
    width: 40px;
  }
 
-  .review__txt {
+  .review {
+    height: 420px;
+    &__txt {
       font-size: 17px;
+    }
   }
 
   .education__img {
@@ -3186,18 +3261,14 @@ font-size: 20px;
     }
   }
 
-  .reviews {
-    padding-left: 20px;
-    padding-right: 20px;
-
-    &__nav {
+  .reviews__nav {
       width: 30px;
     }
-  }
+
 
   .review {
     width: 60%;
-    height: 370px;
+    height: 350px;
     padding-top: 15px;
     padding-bottom: 15px;
 
@@ -3353,7 +3424,7 @@ font-size: 20px;
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 431px) {
   .support-btn {
     padding-left: 5px;
     padding-right: 5px;
@@ -3386,7 +3457,7 @@ font-size: 20px;
   }
 
   .person-info {
-margin-top: 0px;
+margin-top: 0;
   }
 
   h2 {
@@ -3552,42 +3623,13 @@ margin-top: 0px;
       font-size: 21px;
     }
   }
-
-  .reviews {
-    padding-left: 15px;
-    padding-right: 15px;
-
-    &__container {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &__nav {
-      display: flex;
-      justify-content: space-between;
-      width: 70px;
-      margin-top: 8px;
-      margin-bottom: 8px;
-
-
-      &_main {
-        display: none;
-      }
-
-      &_left {
-        margin-right: 10px;
-
-      }
-    }
+  .reviews__nav-prev {
+    top: 310px;
+    left: -6%;
   }
 
   .review {
-    width: 80%;
-    height: 330px;
-
-    &_main {
-      display: none;
-    }
+height: 370px;
 
     &__photo {
       width: 60px;
@@ -3782,7 +3824,7 @@ margin-top: 0px;
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 415px) {
   .bar {
     width: 40px;
   }
@@ -3812,17 +3854,11 @@ margin-top: 0px;
     }
   }
 
-  .reviews {
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-    &__container {
-      margin-top: 15px;
-    }
+  .reviews__nav-prev {
+    top: 340px;
   }
-
   .review {
-    height: 335px;
+    height: 400px;
   }
 
   .photo__img {
@@ -3887,7 +3923,7 @@ margin-top: 0px;
 
 }
 
-@media (max-width: 390px) {
+@media (max-width: 391px) {
 
   .main-screen {
     height: 970px;
@@ -4102,13 +4138,12 @@ margin-top: 0px;
     font-size: 20px;
   }
 
-  .reviews {
-    padding-right: 10px;
-    padding-left: 10px;
+  .reviews__nav-prev {
+    left: -7%;
   }
 
   .review {
-    height: 355px;
+    height: 410px;
   }
 
   .education {
@@ -4156,9 +4191,13 @@ margin-top: 0px;
     font-size: 15px;
   }
 
+  .reviews__nav-prev {
+    top: 320px;
+    left: -8%;
+  }
+
   .review {
-    width: 75%;
-    height: 340px;
+    height: 390px;
 
     &__txt {
       font-size: 13px;

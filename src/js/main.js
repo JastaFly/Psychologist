@@ -16,7 +16,7 @@ for (let button of showModalButtons) {
     })
 }
 
-for(let question of questions) {
+for (let question of questions) {
     question.addEventListener('click', (event) => {
         const answer = question.querySelector('.question__answer'),
             cross = question.querySelector('.question__img'),
@@ -25,7 +25,7 @@ for(let question of questions) {
         let arAnswerHeight = [0, answer.scrollHeight],
             arCrossRotate = [0, 45]
 
-        if(questionCssClasses.contains('question_active')) {
+        if (questionCssClasses.contains('question_active')) {
             arAnswerHeight = arAnswerHeight.reverse()
             arCrossRotate.reverse()
             questionCssClasses.remove('question_active')
@@ -88,10 +88,10 @@ const swiper = new Swiper('.swiper', {
     spaceBetween: 50,
     navigation: {
         nextEl: '.reviews__nav-next',
-        prevEl: '.reviews__nav-prev',
+        prevEl: '.reviews__nav-prev'
     },
     autoplay: {
-        delay: 5000,
+        delay: 5000
     },
     breakpoints: {
         1024: {
@@ -124,7 +124,7 @@ const swiper = new Swiper('.swiper', {
         },
         320: {
             spaceBetween: 0,
-            slidesPerView: 1,
+            slidesPerView: 1
         }
     }
-});
+})

@@ -1,13 +1,9 @@
-
 main {
   padding-top: 50px;
   padding-bottom: 50px;
   padding-left: 100px;
   padding-right: 100px;
 }
-
-//Main-screen
-
 
 .main-screen {
   display: flex;
@@ -21,17 +17,14 @@ main {
 
 }
 
-//Text block
-
+// Text block
 .person {
-
   h1 {
     font-size: 85px;
     margin-left: 20px;
   }
 
-
- &__img {
+  &__img {
     width: 160px;
   }
 
@@ -55,12 +48,9 @@ main {
 }
 
 //Photo block
-
 .composition {
-
   margin-top: 60px;
   height: 850px;
-
 
   &__photo {
     width: 500px;
@@ -68,14 +58,13 @@ main {
     z-index: 1;
   }
 
-
   &__elem {
     width: 380px;
 
     &_beige {
       position: relative;
       top: -690px;
-      left: -10px ;
+      left: -10px;
     }
   }
 
@@ -100,7 +89,6 @@ main {
 }
 
 //Requests
-
 .request {
   font-size: 50px;
   margin-top: 30px;
@@ -112,21 +100,17 @@ main {
   &_txt {
     margin-top: 40px;
   }
-
 }
 
 .request-info {
-
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .request-group {
-
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -140,7 +124,6 @@ main {
     font-size: 28px;
     width: 60%;
   }
-
 }
 
 .other-info {
@@ -158,11 +141,9 @@ main {
   &__txt {
     width: 45%;
   }
-
 }
 
-//Methods
-
+// Methods
 .methods {
   background-color: #d8f0b6;
   margin-top: 0;
@@ -180,15 +161,12 @@ main {
   text-align: center;
   align-items: center;
 
-
-
   &__title {
     width: 75%;
   }
 
   &__text {
     width: 100%;
-
   }
 
   p {
@@ -196,8 +174,7 @@ main {
   }
 }
 
-//Ikons and text
-
+// Ikons and text
 .icons-txt {
   display: flex;
   justify-content: space-between;
@@ -213,11 +190,10 @@ main {
     &_work {
       width: 30%;
     }
-
   }
 
   &__img {
-width: 100px;
+    width: 100px;
 
     &_work {
       width: 100px;
@@ -234,7 +210,6 @@ width: 100px;
     &_work {
       margin-left: 10px;
       font-size: 26px;
-
     }
   }
 
@@ -245,16 +220,15 @@ width: 100px;
 }
 
 //The work process
-
 .work-process {
- margin-top: 30px;
-}
-
-.work-process-wrap {
-  display: flex;
-  justify-content: space-between;
   margin-top: 30px;
-  margin-bottom: 30px;
+
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .work-info {
@@ -266,8 +240,7 @@ width: 100px;
   margin-right: 120px;
 }
 
-//Mindfullness
-
+// Mindfullness
 .mind-work {
   background-color: #d8f0b6;
   margin-right: -100px;
@@ -289,8 +262,7 @@ width: 100px;
   margin-bottom: 40px;
 }
 
-//Services
-
+// Services
 .services {
   margin-top: 30px;
 }
@@ -302,7 +274,6 @@ width: 100px;
   padding-bottom: 20px;
   display: flex;
   justify-content: space-between;
-
 }
 
 .price {
@@ -341,8 +312,7 @@ width: 100px;
   }
 }
 
-//Free consultation
-
+// Free consultation
 .free {
   background-color: #d8f0b6;
   margin-right: -100px;
@@ -364,18 +334,15 @@ width: 100px;
   }
 
   &__txt {
-width: 80%;
+    width: 80%;
     margin-bottom: 30px;
   }
 }
 
-//Reviews
-
+// Reviews
 .reviews {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-right: 50px;
-  padding-left: 50px;
+  width: 90%;
+  margin: 0 auto;
 
   &__container {
     display: flex;
@@ -387,16 +354,22 @@ width: 80%;
   &__nav {
     width: 80px;
     cursor: pointer;
+    position: relative;
+    top: 500px;
+    left: -3%;
+
+    &-next {
+      top: -305px;
+      left: 98%;
+    }
 
     &_left {
       display: none;
     }
-
   }
 }
 
 .review {
-  width: 33%;
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -404,6 +377,7 @@ width: 80%;
   border: 3px solid #525236;
   border-radius: 15px;
   height: 620px;
+  box-sizing: border-box;
 
   p {
     margin: 0;
@@ -437,8 +411,7 @@ width: 80%;
   }
 }
 
-//Support-info
-
+// Support-info
 .support {
   background-color: #bbcfdd;
   margin-right: -100px;
@@ -465,17 +438,15 @@ width: 80%;
   }
 }
 
-//Education-info
-
+// Education-info
 .education-info {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 .education {
-
   display: flex;
-justify-content: space-between;
+  justify-content: space-between;
   align-items: center;
   margin-top: 30px;
 
@@ -497,11 +468,9 @@ justify-content: space-between;
     width: 75%;
     padding: 30px;
   }
-
 }
 
-//The answers
-
+// The answers
 .questions {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -510,7 +479,6 @@ justify-content: space-between;
 }
 
 .question {
-
   background-color: #d8f0b6;
   border-radius: 20px;
   display: flex;
@@ -521,6 +489,7 @@ justify-content: space-between;
   padding-right: 35px;
   padding-left: 35px;
   margin-bottom: 25px;
+  cursor: pointer;
 
   p {
     color: #525236;
@@ -538,6 +507,11 @@ justify-content: space-between;
     font-weight: bold;
     margin-left: 20px;
   }
+
+  &__answer {
+    height: 0;
+    overflow: hidden;
+  }
 }
 
 .question-wrap {
@@ -546,8 +520,7 @@ justify-content: space-between;
   align-items: center;
 }
 
-//Form
-
+// Form
 .title {
   display: none;
 }
@@ -578,7 +551,7 @@ justify-content: space-between;
     background-color: #bbcfdd;
     border-radius: 200px;
     position: relative;
-    top:-690px;
+    top: -690px;
     left: -150px;
   }
 
@@ -588,7 +561,7 @@ justify-content: space-between;
     background-color: #d8f0b6;
     border-radius: 200px;
     position: relative;
-    top:-530px;
+    top: -530px;
     left: 430px;
   }
 }
@@ -611,7 +584,9 @@ justify-content: space-between;
     padding-right: 20px;
     font-size: 22px;
 
-    &::placeholder { color: #525236; }
+    &::placeholder {
+      color: #525236;
+    }
 
     &_modal {
       margin-bottom: 8px;
@@ -632,7 +607,9 @@ justify-content: space-between;
     padding-right: 20px;
     font-size: 22px;
 
-    &::placeholder { color: #525236; }
+    &::placeholder {
+      color: #525236;
+    }
 
     &_modal {
       margin-bottom: 10px;
@@ -643,8 +620,7 @@ justify-content: space-between;
 
 }
 
-//Support-btn
-
+// Support-btn
 .support-btn {
   display: flex;
   justify-content: space-between;
@@ -661,7 +637,7 @@ justify-content: space-between;
   top: 500px;
   left: -270px;
   transition: 0.7s;
-  text-decoration:none;
+  text-decoration: none;
   z-index: 2;
 
   &:hover {
@@ -675,14 +651,10 @@ justify-content: space-between;
   &__txt {
     font-size: 20px;
     color: #6a4513;
-
-
   }
 }
 
-//Modal form
-
-
+// Modal form
 .modal {
   position: fixed;
   left: 0;
@@ -692,39 +664,38 @@ justify-content: space-between;
   z-index: 99998;
   backdrop-filter: blur(10px);
   display: none;
+
+  &-form {
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #ffeed7;
+    border: 2px solid #525236;
+    border-radius: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 5%;
+    padding-left: 5%;
+
+    &__close {
+      width: 45px;
+      cursor: pointer;
+      margin-left: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__txt {
+      font-size: 23px;
+    }
+
+    h3 {
+      font-size: 38px;
+    }
+  }
 }
 
-.modal-form {
-  width: 25%;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  background-color: #ffeed7;
-  border: 2px solid #525236;
-  border-radius: 30px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 5%;
-  padding-left: 5%;
-
-  &__close {
-    width: 45px;
-    cursor: pointer;
-    margin-left: 100%;
-    margin-bottom: 20px;
-  }
-
-  &__txt {
-    font-size: 23px;
-  }
-
-  h3 {
-    font-size: 38px;
-  }
-}
-
-//Mobile-menu
-
+// Mobile-menu
 .menu-mobile {
   background-color: #C4E7FF;
   position: fixed;
@@ -752,7 +723,7 @@ justify-content: space-between;
 }
 
 .mobile-links {
-padding-left: 0;
+  padding-left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -767,4 +738,3 @@ padding-left: 0;
     font-weight: 500;
   }
 }
-

@@ -82,7 +82,7 @@ closeMobileMenu.addEventListener('click', () => {
     })
 })
 
-const swiper = new Swiper('.swiper', {
+const reviewSlider = new Swiper('.reviews', {
     loop: true,
     slidesPerView: 2,
     spaceBetween: 50,
@@ -126,5 +126,19 @@ const swiper = new Swiper('.swiper', {
             spaceBetween: 0,
             slidesPerView: 1
         }
+    }
+})
+
+const educationSlider = new Swiper('.education', {
+    loop: true,
+    navigation: {
+        nextEl: '.education__nav_prev',
+        prevEl: '.education__nav_next'
+    },
+    autoplay: {
+        delay: 5000
+    },
+    breakpoints: {
+
     }
 })

@@ -13,7 +13,7 @@ const cssmin = require('gulp-cssmin');
 function html() {
     return src('./src/index.html')
         .pipe(rigger())
-        .pipe(dest('./build/'))
+        .pipe(dest('.'))
         .pipe(reload({stream: true}))
 }
 
@@ -27,39 +27,39 @@ function less_translator() {
         .pipe(prefixer({
             cascade: false
         }))
-        .pipe(dest('./build/css'))
+        .pipe(dest('./css'))
         .pipe(reload({stream: true}))
 }
 
 function img() {
     return src('./src/img/**/*')
-        .pipe(dest('./build/img'))
+        .pipe(dest('./img'))
 }
 
 function fonts() {
     return src('./src/fonts/**/*')
-        .pipe(dest('./build/fonts'))
+        .pipe(dest('./fonts'))
 }
 
 function libs() {
     return src('./src/libs/**/*')
-        .pipe(dest('./build/libs'))
+        .pipe(dest('./libs'))
 }
 
 function js() {
     return src('./src/js/**/*')
-        .pipe(dest('./build/js'))
+        .pipe(dest('./js'))
         .pipe(reload({stream: true}))
 }
 function php() {
     return src('./src/php/**/*')
-        .pipe(dest('./build/php'))
+        .pipe(dest('./php'))
 }
 
 
 const config = {
     server: {
-        baseDir: "./build"
+        baseDir: "."
     },
     tunnel: false,
     host: 'localhost',
@@ -73,7 +73,7 @@ function webServer(cb) {
 }
 function sound() {
     return src('./src/sound/**/*')
-        .pipe(dest('./build/sound'))
+        .pipe(dest('./sound'))
 }
 
 function watchAll(cb) {

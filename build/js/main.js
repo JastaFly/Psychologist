@@ -31,11 +31,8 @@ for (let question of questions) {
         } else {
             questionCssClasses.add('question_active')
         }
-        console.log( answer)
-        console.log(answer.scrollHeight)
+
         answer.style.height = answerHeight
-
-
         cross.style.transform = `rotate(${crossRotateDegree}deg)`
     })
 }
@@ -49,13 +46,12 @@ closeModal.addEventListener('click', (event) => {
 burgerMenu.addEventListener('click', () => {
     const mobileMenu = document.querySelector('.menu-mobile')
 
-
-
     mobileMenu.style.height = '100%'
 })
 
 closeMobileMenu.addEventListener('click', () => {
     const mobileMenu = document.querySelector('.menu-mobile')
+
     mobileMenu.style.height = 0
 })
 
@@ -71,34 +67,14 @@ const reviewSlider = new Swiper('.reviews', {
         delay: 5000
     },
     breakpoints: {
-        1024: {
-            spaceBetween: 30
-        },
-        932: {
-            spaceBetween: 20
-        },
-
-        915: {
-            spaceBetween: 20
-        },
-
-        912: {
-            spaceBetween: 20
-        },
-
-        896: {
-            spaceBetween: 20
-        },
-        882: {
-            spaceBetween: 30
-        },
-
-        852: {
-            spaceBetween: 30
-        },
-        820: {
-            spaceBetween: 30
-        },
+        1024: {spaceBetween: 30},
+        932: {spaceBetween: 20},
+        915: {spaceBetween: 20},
+        912: {spaceBetween: 20},
+        896: {spaceBetween: 20},
+        882: {spaceBetween: 30},
+        852: {spaceBetween: 30},
+        820: {spaceBetween: 30},
         320: {
             spaceBetween: 0,
             slidesPerView: 1
@@ -114,8 +90,5 @@ const educationSlider = new Swiper('.education', {
     },
     autoplay: {
         delay: 5000
-    },
-    breakpoints: {
-
     }
 })

@@ -1,4 +1,3 @@
-const {animate} = anime
 const showModalButtons = document.querySelectorAll('[data-show-modal]')
 const closeModal = document.querySelector('.modal-form__close')
 const burgerMenu = document.querySelector('.bar')
@@ -22,31 +21,19 @@ for (let question of questions) {
             cross = question.querySelector('.question__img'),
             questionCssClasses = question.classList
 
-        let arAnswerHeight = [0, answer.scrollHeight],
-            arCrossRotate = [0, 45]
+        let answerHeight = `${answer.scrollHeight}px`,
+            crossRotateDegree = 45
 
         if (questionCssClasses.contains('question_active')) {
-            arAnswerHeight = arAnswerHeight.reverse()
-            arCrossRotate.reverse()
+            answerHeight = 0
+            crossRotateDegree = 0
             questionCssClasses.remove('question_active')
         } else {
             questionCssClasses.add('question_active')
         }
-        console.log(arAnswerHeight)
-        console.log(arCrossRotate)
 
-        animate(answer, {
-            height: arAnswerHeight,
-            duration: 500,
-        })
-
-        animate(cross, {
-            rotate: {
-                from: arCrossRotate[0],
-                to: arCrossRotate[1]
-            },
-            duration: 500,
-        })
+        answer.style.height = answerHeight
+        cross.style.transform = `rotate(${crossRotateDegree}deg)`
     })
 }
 
@@ -59,30 +46,16 @@ closeModal.addEventListener('click', (event) => {
 burgerMenu.addEventListener('click', () => {
     const mobileMenu = document.querySelector('.menu-mobile')
 
-    animate(mobileMenu, {
-        display: 'block',
-        height: [0, 100],
-        duration: 500,
-        begin: function (anim) {
-            mobileMenu.style.display = 'block';
-        }
-    })
+    mobileMenu.style.height = '100%'
 })
 
 closeMobileMenu.addEventListener('click', () => {
     const mobileMenu = document.querySelector('.menu-mobile')
-    animate(mobileMenu, {
-        height: [100, 0],
-        duration: 500,
-        complete: function (anim) {
-            setTimeout(() => {
-                mobileMenu.style.display = 'none';
-            }, 500)
-        }
-    })
+
+    mobileMenu.style.height = 0
 })
 
-const swiper = new Swiper('.swiper', {
+const reviewSlider = new Swiper('.reviews', {
     loop: true,
     slidesPerView: 2,
     spaceBetween: 50,
@@ -94,37 +67,28 @@ const swiper = new Swiper('.swiper', {
         delay: 5000
     },
     breakpoints: {
-        1024: {
-            spaceBetween: 30
-        },
-        932: {
-            spaceBetween: 20
-        },
-
-        915: {
-            spaceBetween: 20
-        },
-
-        912: {
-            spaceBetween: 20
-        },
-
-        896: {
-            spaceBetween: 20
-        },
-        882: {
-            spaceBetween: 30
-        },
-
-        852: {
-            spaceBetween: 30
-        },
-        820: {
-            spaceBetween: 30
-        },
+        1024: {spaceBetween: 30},
+        932: {spaceBetween: 20},
+        915: {spaceBetween: 20},
+        912: {spaceBetween: 20},
+        896: {spaceBetween: 20},
+        882: {spaceBetween: 30},
+        852: {spaceBetween: 30},
+        820: {spaceBetween: 30},
         320: {
             spaceBetween: 0,
             slidesPerView: 1
         }
+    }
+})
+
+const educationSlider = new Swiper('.education', {
+    loop: true,
+    navigation: {
+        nextEl: '.education__nav_prev',
+        prevEl: '.education__nav_next'
+    },
+    autoplay: {
+        delay: 5000
     }
 })

@@ -36,7 +36,6 @@ main {
 .person-name {
   display: flex;
   align-items: center;
-
 }
 
 .person-info {
@@ -47,7 +46,7 @@ main {
   display: none;
 }
 
-//Photo block
+// Photo block
 .composition {
   margin-top: 60px;
   height: 850px;
@@ -88,7 +87,7 @@ main {
   }
 }
 
-//Requests
+// Requests
 .request {
   font-size: 50px;
   margin-top: 30px;
@@ -174,7 +173,7 @@ main {
   }
 }
 
-// Ikons and text
+// Icons and text
 .icons-txt {
   display: flex;
   justify-content: space-between;
@@ -219,7 +218,7 @@ main {
   }
 }
 
-//The work process
+// The work process
 .work-process {
   margin-top: 30px;
 
@@ -247,7 +246,6 @@ main {
   margin-left: -100px;
   padding-left: inherit;
   padding-right: inherit;
-  padding-top: inherit;
   padding-top: 25px;
   padding-bottom: 25px;
 
@@ -303,7 +301,6 @@ main {
 
   &__price {
     font-weight: bold;
-
   }
 
   &__sale {
@@ -438,35 +435,42 @@ main {
   }
 }
 
+#education {
+  margin-top: 40px;
+  margin-bottom: -40px;
+}
+
+#answers {
+  margin-top: -40px;
+}
+
 // Education-info
 .education-info {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  border: 3px solid #525236;
+  border-radius: 15px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 3%;
+  padding-left: 3%;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .education {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
-
   &__nav {
     width: 80px;
     cursor: pointer;
+    position: relative;
 
-  }
+    &_prev {
+      left: -4%;
+      top: 750px;
+    }
 
-  &__wrap {
-    width: 85%;
-    border: 3px solid #525236;
-    border-radius: 15px;
-  }
-
-  &__img {
-    display: block;
-    margin: 0 auto;
-    width: 75%;
-    padding: 30px;
+    &_next {
+      left: 100%;
+      top: -550px;
+    }
   }
 }
 
@@ -500,6 +504,7 @@ main {
 
   &__img {
     width: 60px;
+    transition: 0.5s;
   }
 
   &__txt {
@@ -511,6 +516,7 @@ main {
   &__answer {
     height: 0;
     overflow: hidden;
+    transition: 0.5s;
   }
 }
 
@@ -617,7 +623,6 @@ main {
       resize: none;
     }
   }
-
 }
 
 // Support-btn
@@ -700,16 +705,16 @@ main {
   background-color: #C4E7FF;
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 0;
   left: 0;
   top: 0;
   z-index: 99998;
   padding-left: 30px;
   padding-right: 30px;
-  display: none;
   box-sizing: border-box;
   padding-top: 10px;
   overflow: hidden;
+  transition: 0.5s;
 
   &__header {
     display: flex;

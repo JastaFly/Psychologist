@@ -704,17 +704,17 @@
     </div>
 </main>
 <div class="modal">
-    <form class="modal-form">
+    <form class="modal-form" action="/php/mail.php" method="post">
         <svg class="modal-form__close" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M34.0521 18.6675C34.8031 17.9165 34.8031 16.6989 34.0521 15.9479C33.301 15.1969 32.0833 15.1969 31.3323 15.9479L34.0521 18.6675ZM15.9477 31.3326C15.1967 32.0836 15.1967 33.301 15.9477 34.0521C16.6987 34.8031 17.9164 34.8031 18.6674 34.0521L15.9477 31.3326ZM18.6677 15.9479C17.9167 15.1969 16.6991 15.1969 15.948 15.9479C15.197 16.6989 15.197 17.9165 15.948 18.6675L18.6677 15.9479ZM31.3326 34.0521C32.0836 34.8031 33.3013 34.8031 34.0523 34.0521C34.8033 33.301 34.8033 32.0836 34.0523 31.3326L31.3326 34.0521ZM31.3323 15.9479L15.9477 31.3326L18.6674 34.0521L34.0521 18.6675L31.3323 15.9479ZM15.948 18.6675L31.3326 34.0521L34.0523 31.3326L18.6677 15.9479L15.948 18.6675ZM46.1538 25C46.1538 36.6828 36.6828 46.1538 25 46.1538V50C38.8072 50 50 38.8072 50 25H46.1538ZM25 46.1538C13.3171 46.1538 3.84615 36.6828 3.84615 25H0C0 38.8072 11.1929 50 25 50V46.1538ZM3.84615 25C3.84615 13.3171 13.3171 3.84615 25 3.84615V0C11.1929 0 0 11.1929 0 25H3.84615ZM25 3.84615C36.6828 3.84615 46.1538 13.3171 46.1538 25H50C50 11.1929 38.8072 0 25 0V3.84615Z"
                   fill="#11344B"/>
         </svg>
         <h3>ЗАПОЛНИТЕ ФОРМУ</h3>
         <span class="modal-form__txt">Я свяжусь с вами в ближайшее время!</span>
-        <input type="text" required class="form__input form__input_modal" name="firstname" placeholder="Ваше имя*">
-        <input type="tel" required class="form__input form__input_modal" name="number"
+        <input type="text" required class="form__input form__input_modal" name="name" placeholder="Ваше имя*">
+        <input type="tel" required class="form__input form__input_modal" name="phone"
                placeholder="+7 (000) 000-00-00*">
-        <input type="email" class="form__input form__input_modal" name="login" placeholder="Ваш e-mail*">
+        <input type="email" class="form__input form__input_modal" name="email" placeholder="Ваш e-mail*">
         <textarea class="form__message form__message_modal" name="message" placeholder="Комментарий"></textarea>
         <input type="submit" class="btn btn_form btn_modal" value="ОТПРАВИТЬ">
     </form>

@@ -8,6 +8,7 @@ const rigger = require('gulp-rigger');
 const rename = require("gulp-rename");
 const less = require('gulp-less');
 const cssmin = require('gulp-cssmin');
+const terser = require('gulp-terser')
 
 
 function html() {
@@ -48,6 +49,14 @@ function libs() {
 
 function js() {
     return src('./src/js/**/*')
+        .pipe(terser({
+            mangle: true,
+            compress: true,
+            keep_fnames: false
+        }))
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(dest('./js'))
         .pipe(reload({stream: true}))
 }

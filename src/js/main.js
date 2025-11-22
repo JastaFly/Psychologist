@@ -1,8 +1,9 @@
 const showModalButtons = document.querySelectorAll('[data-show-modal]')
-const closeModal = document.querySelector('.modal-form__close')
+const closeModal = document.querySelectorAll('[data-close-modal]')
 const burgerMenu = document.querySelector('.bar')
 const closeMobileMenu = document.querySelector('.menu-mobile__icon')
 const questions = document.querySelectorAll('.question')
+const forms = document.querySelectorAll('form')
 
 function modalToggle(elem, displayValue) {
     elem.style.display = displayValue
@@ -37,11 +38,16 @@ for (let question of questions) {
     })
 }
 
-closeModal.addEventListener('click', (event) => {
-    const modal = document.querySelector('.modal')
 
-    modalToggle(modal, 'none')
-})
+
+for (let close of closeModal) {
+    close.addEventListener('click', (event) => {
+        const modal = close.closest('[data-modal]')
+        console.log(modal)
+
+        modalToggle(modal, 'none')
+    })
+}
 
 burgerMenu.addEventListener('click', () => {
     const mobileMenu = document.querySelector('.menu-mobile')
@@ -54,6 +60,44 @@ closeMobileMenu.addEventListener('click', () => {
 
     mobileMenu.style.height = 0
 })
+
+for (let form of forms) {
+    form.addEventListener('submit', function(event) {
+        // Предотвращаем стандартную отправку формы
+        event.preventDefault()
+
+        const requestData = new FormData(this)
+        const formModal = document.querySelector('.modal')
+
+        if(formModal.style.display === 'block') {
+            formModal.style.display = 'none'
+        }
+
+        fetch('/php/mail.php', {
+            method: 'POST',
+            body: requestData
+        }).then((response) => {
+            response.json().then((data) => {
+
+                if(data === 'ok') {
+                    const successModal = document.querySelector('.modal-window')
+                    console.log(successModal)
+
+                    successModal.style.display = 'block'
+                } else {
+                    console.error(data)
+                }
+            })
+        }).catch((error) => {
+            console.log('Случилась ошибка!')
+            console.error(error)
+        })
+
+        // Дополнительные действия (например, валидация)
+        console.log('Форма отправлена!')
+    })
+}
+
 
 const reviewSlider = new Swiper('.reviews', {
     loop: true,
@@ -89,6 +133,6 @@ const educationSlider = new Swiper('.education', {
         prevEl: '.education__nav_next'
     },
     autoplay: {
-        delay: 5000
+        delay: 500
     }
 })

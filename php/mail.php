@@ -4,9 +4,11 @@ require_once('../vendor/autoload.php');
 
 if (!empty($_POST)) {
 
+
     $mailer = new \PHPMailer\PHPMailer\PHPMailer();
     $dotenv = Dotenv\Dotenv::createImmutable($_SERVER['DOCUMENT_ROOT']);
     $dotenv->load();
+    $response = 'ok';
 
     try {
 
@@ -22,7 +24,7 @@ if (!empty($_POST)) {
         $mailer->SMTPSecure = 'ssl';
         $mailer->Port = 465;
         $mailer->setFrom($_ENV['MAIL_USER'], 'Psychologist');
-        $mailer->addAddress($_POST['email']); // Получатель письма
+        $mailer->addAddress($_ENV['MAIL_USER']); // Получатель письма
         $mailer->isHTML(true);
         $mailer->Subject = 'Новая заявка!';
 
@@ -38,12 +40,13 @@ if (!empty($_POST)) {
             $mailer->Body = 'Ваша заявка на консультацию психолога принята. В ближайшее время с я свяжусь с Вами';
             $mailer->send();
 
-            echo 'Ожидайте звонка, спасибо!';
         } else {
-            echo 'Сообщение не было отправлено. Неверно указаны настройки вашей почты';
+            $response = 'Mail setting error';
         }
 
     } catch (Exception $e) {
-        echo "Сообщение не было отправлено. Причина ошибки: {$mailer->ErrorInfo}";
+        $responce = "Error: {$mailer->ErrorInfo}";
     }
+
+    echo json_encode($response);
 }

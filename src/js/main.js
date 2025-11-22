@@ -38,12 +38,9 @@ for (let question of questions) {
     })
 }
 
-
-
 for (let close of closeModal) {
     close.addEventListener('click', (event) => {
         const modal = close.closest('[data-modal]')
-        console.log(modal)
 
         modalToggle(modal, 'none')
     })
@@ -62,14 +59,13 @@ closeMobileMenu.addEventListener('click', () => {
 })
 
 for (let form of forms) {
-    form.addEventListener('submit', function(event) {
-        // Предотвращаем стандартную отправку формы
+    form.addEventListener('submit', function (event) {
         event.preventDefault()
 
         const requestData = new FormData(this)
         const formModal = document.querySelector('.modal')
 
-        if(formModal.style.display === 'block') {
+        if (formModal.style.display === 'block') {
             formModal.style.display = 'none'
         }
 
@@ -79,9 +75,8 @@ for (let form of forms) {
         }).then((response) => {
             response.json().then((data) => {
 
-                if(data === 'ok') {
+                if (data === 'ok') {
                     const successModal = document.querySelector('.modal-window')
-                    console.log(successModal)
 
                     successModal.style.display = 'block'
                 } else {
@@ -92,9 +87,6 @@ for (let form of forms) {
             console.log('Случилась ошибка!')
             console.error(error)
         })
-
-        // Дополнительные действия (например, валидация)
-        console.log('Форма отправлена!')
     })
 }
 
@@ -103,13 +95,8 @@ const reviewSlider = new Swiper('.reviews', {
     loop: true,
     slidesPerView: 2,
     spaceBetween: 50,
-    navigation: {
-        nextEl: '.reviews__nav-next',
-        prevEl: '.reviews__nav-prev'
-    },
-    autoplay: {
-        delay: 5000
-    },
+    navigation: {nextEl: '.reviews__nav-next', prevEl: '.reviews__nav-prev'},
+    autoplay: {delay: 5000},
     breakpoints: {
         1024: {spaceBetween: 30},
         932: {spaceBetween: 20},
@@ -119,20 +106,12 @@ const reviewSlider = new Swiper('.reviews', {
         882: {spaceBetween: 30},
         852: {spaceBetween: 30},
         820: {spaceBetween: 30},
-        320: {
-            spaceBetween: 0,
-            slidesPerView: 1
-        }
+        320: {spaceBetween: 0, slidesPerView: 1}
     }
 })
 
 const educationSlider = new Swiper('.education', {
     loop: true,
-    navigation: {
-        nextEl: '.education__nav_prev',
-        prevEl: '.education__nav_next'
-    },
-    autoplay: {
-        delay: 500
-    }
+    navigation: {nextEl: '.education__nav_prev', prevEl: '.education__nav_next'},
+    autoplay: {delay: 500}
 })

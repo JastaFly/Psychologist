@@ -1,8 +1,9 @@
 const showModalButtons = document.querySelectorAll('[data-show-modal]')
-const closeModal = document.querySelector('.modal-form__close')
+const closeModal = document.querySelectorAll('[data-close-modal]')
 const burgerMenu = document.querySelector('.bar')
 const closeMobileMenu = document.querySelector('.menu-mobile__icon')
 const questions = document.querySelectorAll('.question')
+const forms = document.querySelectorAll('form')
 
 function modalToggle(elem, displayValue) {
     elem.style.display = displayValue
@@ -37,11 +38,13 @@ for (let question of questions) {
     })
 }
 
-closeModal.addEventListener('click', (event) => {
-    const modal = document.querySelector('.modal')
+for (let close of closeModal) {
+    close.addEventListener('click', (event) => {
+        const modal = close.closest('[data-modal]')
 
-    modalToggle(modal, 'none')
-})
+        modalToggle(modal, 'none')
+    })
+}
 
 burgerMenu.addEventListener('click', () => {
     const mobileMenu = document.querySelector('.menu-mobile')
@@ -55,17 +58,45 @@ closeMobileMenu.addEventListener('click', () => {
     mobileMenu.style.height = 0
 })
 
+for (let form of forms) {
+    form.addEventListener('submit', function (event) {
+        event.preventDefault()
+
+        const requestData = new FormData(this)
+        const formModal = document.querySelector('.modal')
+
+        if (formModal.style.display === 'block') {
+            formModal.style.display = 'none'
+        }
+
+        fetch('/php/mail.php', {
+            method: 'POST',
+            body: requestData
+        }).then((response) => {
+            response.json().then((data) => {
+
+                if (data === 'ok') {
+                    const successModal = document.querySelector('.modal-window')
+
+                    successModal.style.display = 'block'
+                } else {
+                    console.error(data)
+                }
+            })
+        }).catch((error) => {
+            console.log('Случилась ошибка!')
+            console.error(error)
+        })
+    })
+}
+
+
 const reviewSlider = new Swiper('.reviews', {
     loop: true,
     slidesPerView: 2,
     spaceBetween: 50,
-    navigation: {
-        nextEl: '.reviews__nav-next',
-        prevEl: '.reviews__nav-prev'
-    },
-    autoplay: {
-        delay: 5000
-    },
+    navigation: {nextEl: '.reviews__nav-next', prevEl: '.reviews__nav-prev'},
+    autoplay: {delay: 5000},
     breakpoints: {
         1024: {spaceBetween: 30},
         932: {spaceBetween: 20},
@@ -75,20 +106,12 @@ const reviewSlider = new Swiper('.reviews', {
         882: {spaceBetween: 30},
         852: {spaceBetween: 30},
         820: {spaceBetween: 30},
-        320: {
-            spaceBetween: 0,
-            slidesPerView: 1
-        }
+        320: {spaceBetween: 0, slidesPerView: 1}
     }
 })
 
 const educationSlider = new Swiper('.education', {
     loop: true,
-    navigation: {
-        nextEl: '.education__nav_prev',
-        prevEl: '.education__nav_next'
-    },
-    autoplay: {
-        delay: 5000
-    }
+    navigation: {nextEl: '.education__nav_prev', prevEl: '.education__nav_next'},
+    autoplay: {delay: 500}
 })

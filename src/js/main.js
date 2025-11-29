@@ -87,6 +87,9 @@ for (let form of forms) {
                     loader.style.display = 'none'
                     successModal.style.display = 'block'
                 } else {
+                    const errorModal = document.querySelector('.modal-window_error')
+                    loader.style.display = 'none'
+                    errorModal.style.display = 'block'
                     console.error(data)
                 }
             })

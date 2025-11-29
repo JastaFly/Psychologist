@@ -77,10 +77,6 @@ for (let form of forms) {
             body: requestData
         }).then((response) => {
             response.json().then((data) => {
-
-
-
-
                 if (data === 'ok') {
                     const successModal = document.querySelector('.modal-window')
 
@@ -88,8 +84,10 @@ for (let form of forms) {
                     successModal.style.display = 'block'
                 } else {
                     const errorModal = document.querySelector('.modal-window_error')
+
                     loader.style.display = 'none'
                     errorModal.style.display = 'block'
+
                     console.error(data)
                 }
             })
@@ -99,7 +97,6 @@ for (let form of forms) {
         })
     })
 }
-
 
 const reviewSlider = new Swiper('.reviews', {
     loop: true,
